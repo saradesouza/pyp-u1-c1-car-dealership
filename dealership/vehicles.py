@@ -7,12 +7,10 @@ class Vehicle(object):
     self.miles = miles
 
   def sale_price(self, base_price):
-    sale_price = base_price * SALE_PRICE_MULTIPLIER 
-    return self.sale_price
+    return base_price * SALE_PRICE_MULTIPLIER
 
   def purchase_price(self, base_price):
-    purchase_price = base_price * PURCHASE_PRICE_MULTIPLIER 
-    return self.purchase_price
+    return (sale_price() - (PURCHASE_PRICE_MULTIPLIER * miles))
 
 class Car(Vehicle):
   SALE_PRICE_MULTIPLIER = 1.2
